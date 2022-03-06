@@ -15,3 +15,6 @@ usage :
     
     // vertical type
     makeSlider('verti',0, 1000,'right','vertical');
+
+site
+https://visionboy.me/
