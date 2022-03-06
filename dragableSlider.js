@@ -184,15 +184,12 @@ function makeSlider(id,min, max,tippyPlc,hv) {
 }
 
 function updateSliderTooltip($slider, values, hv) {
-    console.log(hv);
+ 
     var $sliderWrapper = $slider.closest('.store-slider-wrapper');
     var $sliderHandlers = $slider.find('.ui-slider-handle');
     var $sliderHandlersMin = $sliderHandlers.eq(0);
     var $sliderHandlersMax = $sliderHandlers.eq(1);
-    //var $sliderRange = $slider.find('.ui-slider-range');
 
-    console.log(getCoords($sliderHandlersMin[0]));
-    console.log(getCoords($sliderHandlersMax[0]));
     $sliderHandlersMin.attr('title', values.from);
     $sliderHandlersMax.attr('title', values.to);
 
@@ -204,7 +201,7 @@ function updateSliderTooltip($slider, values, hv) {
         var singleTooltip = (hv=="vertical") ? false : tooltipRange < 80;
 
         if (!singleTooltip) {
-            //console.log("singleTooltip");
+
             if (!$sliderHandlersMin[0]._tippy.state.visible) 
                 $sliderHandlersMin[0]
                     ._tippy
