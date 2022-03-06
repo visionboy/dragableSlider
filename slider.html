@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Sliders</title>
+	<link href="jquery-ui.min.css" rel="stylesheet">
+
+    <style > 
+        .ui-slider .ui-slider-handle {
+            border-radius: 50%;
+        }
+        .horiz span.ui-slider-handle{
+            top:-8px
+        }
+        .verti span.ui-slider-handle{
+            left:-8px
+        }
+        .ui-slider-horizontal {
+            height: 5px;
+        }
+        .ui-slider-vertical {
+            width:5px;
+            margin-left: 5px;
+        }
+        .ui-slider-range {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<br>
+
+<div class="slider-wrapper horiz">
+    <div id="horiz" ></div>
+</div>
+
+<div class="slider-wrapper verti" style="padding-top: 100px;">
+    <div id="verti" style="height:500px"></div>
+</div>
+
+<script src="jquery.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="dragableSlider.js"></script>
+<script>
+    /* 
+    * usage makeSlider(sliderId,sliderMin, slidermax,tippyPlacement, sliderType)
+    * sliderType: horizontal or vertical
+    */
+    makeSlider('horiz',0, 10000,'bottom','horizontal');
+    makeSlider('verti',0, 1000,'right','vertical');
+</script>
+</body>
+</html>
